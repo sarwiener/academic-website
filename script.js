@@ -5,7 +5,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             const navHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = target.offsetTop - navHeight;
+            const extraPadding = 30; // Add extra space so content isn't covered
+            const targetPosition = target.offsetTop - navHeight - extraPadding;
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
