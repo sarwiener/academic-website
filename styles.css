@@ -145,7 +145,7 @@ a:hover {
 /* Hero Section */
 .hero {
     margin-top: 80px;
-    padding: 5rem 2rem 3rem;
+    padding: 5rem 2rem 6rem;
     background: linear-gradient(135deg, var(--warm-cream) 0%, var(--warm-white) 100%);
     position: relative;
     overflow: hidden;
@@ -229,6 +229,7 @@ a:hover {
 .hero-links {
     display: flex;
     gap: 1rem;
+    margin-top: 2.5rem;
 }
 
 .hero-button {
