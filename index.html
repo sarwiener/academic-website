@@ -240,41 +240,75 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p class="contact-intro">
-                        I'm always interested in research collaborations and consulting opportunities. 
-                        Feel free to reach out via email or connect with me on LinkedIn.
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <h4>Email</h4>
-                            <a href="mailto:sarah.wiener@mccombs.utexas.edu">sarah.wiener@mccombs.utexas.edu</a>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Phone</h4>
-                            <a href="tel:+12158961062">(215) 896-1062</a>
-                        </div>
-                        <div class="contact-item">
-                            <h4>LinkedIn</h4>
-                            <a href="https://linkedin.com/in/sarahwiener/" target="_blank" rel="noopener">linkedin.com/in/sarahwiener</a>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Office</h4>
-                            <p>McCombs School of Business<br>
-                            The University of Texas at Austin<br>
-                            Austin, TX 78712</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <p class="contact-intro">
+          I'm always interested in research collaborations and consulting opportunities.
+          Feel free to reach out via the form below or connect with me directly.
+        </p>
 
+        <div data-fs-success style="display:none; color:green; margin-bottom:1rem;">
+          Thanks! Your message has been sent.
+        </div>
+        <div data-fs-error style="display:none; color:red; margin-bottom:1rem;"></div>
+
+        <form id="contact-form" style="display:flex; flex-direction:column; gap:1rem; max-width:480px; margin-top:1.5rem;">
+          <div style="display:flex; gap:1rem;">
+            <input type="text" name="first_name" placeholder="First name" required data-fs-field
+              style="flex:1; padding:10px 14px; font-family:inherit; font-size:15px; border:1px solid #ccc; border-radius:4px;" />
+            <input type="text" name="last_name" placeholder="Last name"
+              style="flex:1; padding:10px 14px; font-family:inherit; font-size:15px; border:1px solid #ccc; border-radius:4px;" />
+          </div>
+          <span data-fs-error="first_name" style="color:red; font-size:13px;"></span>
+
+          <input type="email" name="email" placeholder="Your email" required data-fs-field
+            style="padding:10px 14px; font-family:inherit; font-size:15px; border:1px solid #ccc; border-radius:4px;" />
+          <span data-fs-error="email" style="color:red; font-size:13px;"></span>
+
+          <input type="text" name="subject" placeholder="Subject"
+            style="padding:10px 14px; font-family:inherit; font-size:15px; border:1px solid #ccc; border-radius:4px;" />
+
+          <textarea name="message" rows="5" placeholder="Your message..." required data-fs-field
+            style="padding:10px 14px; font-family:inherit; font-size:15px; border:1px solid #ccc; border-radius:4px; resize:vertical;"></textarea>
+          <span data-fs-error="message" style="color:red; font-size:13px;"></span>
+
+          <button type="submit" data-fs-submit-btn
+            style="padding:12px; font-family:inherit; font-size:15px; cursor:pointer; background:#bf5700; color:white; border:none; border-radius:4px;">
+            Send Message
+          </button>
+        </form>
+
+        <div class="contact-details" style="margin-top:2.5rem;">
+          <div class="contact-item">
+            <h4>Email</h4>
+            <a href="mailto:sarah.wiener@mccombs.utexas.edu">sarah.wiener@mccombs.utexas.edu</a>
+          </div>
+          <div class="contact-item">
+            <h4>Phone</h4>
+            <a href="tel:+12158961062">(215) 896-1062</a>
+          </div>
+          <div class="contact-item">
+            <h4>LinkedIn</h4>
+            <a href="https://linkedin.com/in/sarahwiener/" target="_blank" rel="noopener">linkedin.com/in/sarahwiener</a>
+          </div>
+          <div class="contact-item">
+            <h4>Office</h4>
+            <p>McCombs School of Business<br>The University of Texas at Austin<br>Austin, TX 78712</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contact-form', formId: 'xredpqva' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</section>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
